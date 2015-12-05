@@ -2,6 +2,8 @@
 
 [TAP](https://testanything.org/) test framework for Crystal.
 
+[![](https://img.shields.io/travis/MakeNowJust/tap.svg?style=flat-square)](https://travis-ci.org/MakeNowJust/tap)
+[![docrystal.org](https://img.shields.io/badge/docrystal-ref-866BA6.svg?style=flat-square)](http://docrystal.org/github.com/MakeNowJust/tap)
 
 ## Installation
 
