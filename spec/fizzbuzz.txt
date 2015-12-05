@@ -1,0 +1,65 @@
+TAP Version 13
+# fizzbuzz
+ok 1 - should equal
+ok 2 - should equal
+ok 3 - should equal
+ok 4 - should equal
+ok 5 - should equal
+ok 6 - should equal
+ok 7 - should equal
+ok 8 - should equal
+ok 9 - should equal
+ok 10 - should equal
+ok 11 - should equal
+ok 12 - should equal
+ok 13 - should equal
+ok 14 - should equal
+ok 15 - should equal
+ok 16 - should equal
+not ok 17 - should equal
+  ---
+  test: :-
+    (:FizzBuzz) == fizzbuzz(100)
+  operator: eq
+  expected: :-
+    :FizzBuzz
+  actual: :-
+    :Buzz
+  at: :-
+    ./spec/fizzbuzz.cr - line at 28
+  ...
+ok 18 - should equal
+ok 19 - should equal
+ok 20 - should equal
+ok 21 - should equal
+ok 22 - should equal
+not ok 23 - should equal
+  ---
+  test: :-
+    (:Fizz) == fizzbuzz(1515)
+  operator: eq
+  expected: :-
+    :Fizz
+  actual: :-
+    :FizzBuzz
+  at: :-
+    ./spec/fizzbuzz.cr - line at 34
+  ...
+not ok 24 - should equal
+  ---
+  test: :-
+    (:Buzz) == fizzbuzz(1515)
+  operator: eq
+  expected: :-
+    :Buzz
+  actual: :-
+    :FizzBuzz
+  at: :-
+    ./spec/fizzbuzz.cr - line at 35
+  ...
+ok 25 - should equal
+
+1..25
+# tests 25
+# pass 22
+# fail 3

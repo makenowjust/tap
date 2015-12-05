@@ -1,0 +1,480 @@
+TAP Version 13
+ok 1 - 
+ok 2 - one is one
+not ok 3 - 
+  ---
+  test: 1 == 2
+  operator: ok
+  expected: true
+  actual: false
+  at: :-
+    ./spec/test.cr - line at 5
+  ...
+not ok 4 - one is two
+  ---
+  test: 1 == 2
+  operator: ok
+  expected: true
+  actual: false
+  at: :-
+    ./spec/test.cr - line at 6
+  ...
+not ok 5 - 
+  ---
+  test: !(1 == 1)
+  operator: not_ok
+  expected: false
+  actual: true
+  at: :-
+    ./spec/test.cr - line at 8
+  ...
+not ok 6 - one is one
+  ---
+  test: !(1 == 1)
+  operator: not_ok
+  expected: false
+  actual: true
+  at: :-
+    ./spec/test.cr - line at 9
+  ...
+ok 7 - 
+ok 8 - one is two
+ok 9 - should equal
+ok 10 - one is one
+not ok 11 - should equal
+  ---
+  test: 2 == 1
+  operator: eq
+  expected: 2
+  actual: 1
+  at: :-
+    ./spec/test.cr - line at 15
+  ...
+not ok 12 - one is two
+  ---
+  test: 2 == 1
+  operator: eq
+  expected: 2
+  actual: 1
+  at: :-
+    ./spec/test.cr - line at 16
+  ...
+not ok 13 - should not equal
+  ---
+  test: 1 != 1
+  operator: not_eq
+  expected: 1
+  actual: 1
+  at: :-
+    ./spec/test.cr - line at 18
+  ...
+not ok 14 - one is one
+  ---
+  test: 1 != 1
+  operator: not_eq
+  expected: 1
+  actual: 1
+  at: :-
+    ./spec/test.cr - line at 19
+  ...
+ok 15 - should not equal
+ok 16 - one is two
+ok 17 - should be nil
+not ok 18 - should be nil
+  ---
+  test: :-
+    nil == :not_nil
+  operator: eq
+  expected: nil
+  actual: :-
+    :not_nil
+  at: :-
+    ./spec/test.cr - line at 24
+  ...
+not ok 19 - should not be nil
+  ---
+  test: nil != nil
+  operator: not_eq
+  expected: nil
+  actual: nil
+  at: :-
+    ./spec/test.cr - line at 26
+  ...
+ok 20 - should not be nil
+ok 21 - should be true
+not ok 22 - should be true
+  ---
+  test: true == "true"
+  operator: eq
+  expected: true
+  actual: "true"
+  at: :-
+    ./spec/test.cr - line at 30
+  ...
+ok 23 - should be false
+not ok 24 - should be false
+  ---
+  test: false == "false"
+  operator: eq
+  expected: false
+  actual: "false"
+  at: :-
+    ./spec/test.cr - line at 33
+  ...
+ok 25 - should be same
+ok 26 - one is one
+not ok 27 - should be same
+  ---
+  test: :-
+    cheat_one.same?(cheat_two)
+  operator: same
+  expected_object_id: 2
+  expected: Cheat.new(2)
+  actual_object_id: 1
+  actual: Cheat.new(1)
+  at: :-
+    ./spec/test.cr - line at 50
+  ...
+not ok 28 - one is two
+  ---
+  test: :-
+    cheat_one.same?(cheat_two)
+  operator: same
+  expected_object_id: 2
+  expected: Cheat.new(2)
+  actual_object_id: 1
+  actual: Cheat.new(1)
+  at: :-
+    ./spec/test.cr - line at 51
+  ...
+not ok 29 - should not be same
+  ---
+  test: :-
+    !(cheat_one.same?(cheat_one))
+  operator: not_same
+  expected_object_id: 1
+  expected: Cheat.new(1)
+  actual_object_id: 1
+  actual: Cheat.new(1)
+  at: :-
+    ./spec/test.cr - line at 53
+  ...
+not ok 30 - one is one
+  ---
+  test: :-
+    !(cheat_one.same?(cheat_one))
+  operator: not_same
+  expected_object_id: 1
+  expected: Cheat.new(1)
+  actual_object_id: 1
+  actual: Cheat.new(1)
+  at: :-
+    ./spec/test.cr - line at 54
+  ...
+ok 31 - should not be same
+ok 32 - one is two
+ok 33 - should be instance of
+not ok 34 - should be instance of
+  ---
+  test: :-
+    cheat_one.is_a?(String)
+  operator: is
+  expected_class: String
+  actual: Cheat.new(1)
+  actual_class: Cheat
+  at: :-
+    ./spec/test.cr - line at 59
+  ...
+ok 35 - cheat object
+not ok 36 - cheat object
+  ---
+  test: :-
+    cheat_two.is_a?(String)
+  operator: is
+  expected_class: String
+  actual: Cheat.new(2)
+  actual_class: Cheat
+  at: :-
+    ./spec/test.cr - line at 61
+  ...
+ok 37 - should be instance of
+ok 38 - should be instance of
+not ok 39 - should be instance of
+  ---
+  test: :-
+    "cheat".is_a?(Cheat)
+  operator: is
+  expected_class: Cheat
+  actual: "cheat"
+  actual_class: String
+  at: :-
+    ./spec/test.cr - line at 64
+  ...
+ok 40 - should be instance of
+not ok 41 - string object
+  ---
+  test: :-
+    "cheat".is_a?(Cheat)
+  operator: is
+  expected_class: Cheat
+  actual: "cheat"
+  actual_class: String
+  at: :-
+    ./spec/test.cr - line at 66
+  ...
+ok 42 - string object
+not ok 43 - should not be instance of
+  ---
+  test: :-
+    !(cheat_one.is_a?(Cheat))
+  operator: is_not
+  expected_class: Cheat
+  actual: Cheat.new(1)
+  actual_class: Cheat
+  at: :-
+    ./spec/test.cr - line at 69
+  ...
+ok 44 - should not be instance of
+not ok 45 - cheat object
+  ---
+  test: :-
+    !(cheat_two.is_a?(Cheat))
+  operator: is_not
+  expected_class: Cheat
+  actual: Cheat.new(2)
+  actual_class: Cheat
+  at: :-
+    ./spec/test.cr - line at 71
+  ...
+ok 46 - cheat object
+not ok 47 - should not be instance of
+  ---
+  test: :-
+    !([cheat_one, cheat_two].is_a?(Array(Cheat)))
+  operator: is_not
+  expected_class: Array(Cheat)
+  actual: [Cheat.new(1), Cheat.new(2)]
+  actual_class: Array(Cheat)
+  at: :-
+    ./spec/test.cr - line at 73
+  ...
+not ok 48 - should not be instance of
+  ---
+  test: :-
+    !([cheat_one, cheat_two].is_a?(Array))
+  operator: is_not
+  expected_class: Array(T)
+  actual: [Cheat.new(1), Cheat.new(2)]
+  actual_class: Array(Cheat)
+  at: :-
+    ./spec/test.cr - line at 74
+  ...
+ok 49 - should not be instance of
+not ok 50 - should not be instance of
+  ---
+  test: :-
+    !("cheat".is_a?(String))
+  operator: is_not
+  expected_class: String
+  actual: "cheat"
+  actual_class: String
+  at: :-
+    ./spec/test.cr - line at 76
+  ...
+ok 51 - string object
+not ok 52 - string object
+  ---
+  test: :-
+    !("cheat".is_a?(String))
+  operator: is_not
+  expected_class: String
+  actual: "cheat"
+  actual_class: String
+  at: :-
+    ./spec/test.cr - line at 78
+  ...
+ok 53 - should match
+not ok 54 - should match
+  ---
+  test: "Hello" === "hello"
+  operator: match
+  expected: "Hello"
+  actual: "hello"
+  at: :-
+    ./spec/test.cr - line at 81
+  ...
+ok 55 - should match
+ok 56 - should match
+ok 57 - match regex
+ok 58 - should match
+not ok 59 - should match
+  ---
+  test: 1..3 === 5
+  operator: match
+  expected: 1..3
+  actual: 5
+  at: :-
+    ./spec/test.cr - line at 86
+  ...
+not ok 60 - should not match
+  ---
+  test: !("hello" === "hello")
+  operator: not_match
+  expected: "hello"
+  actual: "hello"
+  at: :-
+    ./spec/test.cr - line at 88
+  ...
+ok 61 - should not match
+not ok 62 - should not match
+  ---
+  test: !((/hello/) === "hello")
+  operator: not_match
+  expected: /hello/
+  actual: "hello"
+  at: :-
+    ./spec/test.cr - line at 90
+  ...
+not ok 63 - should not match
+  ---
+  test: !((/hello/i) === "Hello")
+  operator: not_match
+  expected: /hello/i
+  actual: "Hello"
+  at: :-
+    ./spec/test.cr - line at 91
+  ...
+not ok 64 - match regex
+  ---
+  test: !((/hello/i) === "Hello")
+  operator: not_match
+  expected: /hello/i
+  actual: "Hello"
+  at: :-
+    ./spec/test.cr - line at 92
+  ...
+not ok 65 - should not match
+  ---
+  test: !(1..3 === 1)
+  operator: not_match
+  expected: 1..3
+  actual: 1
+  at: :-
+    ./spec/test.cr - line at 93
+  ...
+ok 66 - should not match
+ok 67 - should raise
+ok 68 - raise an exception
+not ok 69 - should raise
+  ---
+  operator: raises
+  expected: Exception
+  actual: nil
+  at: :-
+    ./spec/test.cr - line at 110
+  ...
+not ok 70 - not raise an exception
+  ---
+  operator: raises
+  expected: Exception
+  actual: nil
+  at: :-
+    ./spec/test.cr - line at 111
+  ...
+ok 71 - raise an exception
+not ok 72 - raise an exception
+  ---
+  operator: raises
+  expected: "exception"
+  actual: :-
+    Ex.new("error")
+
+    no backtrace...
+
+  at: :-
+    ./spec/test.cr - line at 113
+  ...
+ok 73 - raise an exception
+not ok 74 - raise an exception
+  ---
+  operator: raises
+  expected: /exception/
+  actual: :-
+    Ex.new("error")
+
+    no backtrace...
+
+  at: :-
+    ./spec/test.cr - line at 115
+  ...
+not ok 75 - should not raise
+  ---
+  operator: not_raises
+  error: :-
+    Ex.new("error")
+
+    no backtrace...
+
+  at: :-
+    ./spec/test.cr - line at 117
+  ...
+not ok 76 - raise an exception
+  ---
+  operator: not_raises
+  error: :-
+    Ex.new("error")
+
+    no backtrace...
+
+  at: :-
+    ./spec/test.cr - line at 118
+  ...
+ok 77 - should not raise
+ok 78 - not raise an exception
+#
+ok 79 - in unnamed group
+not ok 80 - in unnamed group
+  ---
+  test: false
+  operator: ok
+  expected: true
+  actual: false
+  at: :-
+    ./spec/test.cr - line at 124
+  ...
+# named
+ok 81 - in named group
+not ok 82 - in named group
+  ---
+  test: false
+  operator: ok
+  expected: true
+  actual: false
+  at: :-
+    ./spec/test.cr - line at 129
+  ...
+# catch an exception in test group
+ok 83 - 
+not ok 84 - 
+  ---
+  test: false
+  operator: ok
+  expected: true
+  actual: false
+  at: :-
+    ./spec/test.cr - line at 134
+  ...
+not ok 85 - catch an exception in test group
+  ---
+  error: :-
+    Ex.new("error")
+
+    no backtrace...
+
+  ...
+ok 86 - # skip catch an exception in test group
+
+1..86
+# tests 86
+# pass 43
+# fail 43
