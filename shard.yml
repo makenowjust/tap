@@ -1,7 +1,3 @@
 name: tap
 version: 1.0.0
 description: TAP (Test Anything Protocol) test framework for Crystal
-
-development_dependencies:
-  crake:
-    github: MakeNowJust/crake
