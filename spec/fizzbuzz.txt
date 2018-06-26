@@ -19,7 +19,7 @@ ok 16 - should equal
 not ok 17 - should equal
   ---
   test: :-
-    (:FizzBuzz) == fizzbuzz(100)
+    (:FizzBuzz) == (fizzbuzz(100))
   operator: eq
   expected: :-
     :FizzBuzz
@@ -36,7 +36,7 @@ ok 22 - should equal
 not ok 23 - should equal
   ---
   test: :-
-    (:Fizz) == fizzbuzz(1515)
+    (:Fizz) == (fizzbuzz(1515))
   operator: eq
   expected: :-
     :Fizz
@@ -48,7 +48,7 @@ not ok 23 - should equal
 not ok 24 - should equal
   ---
   test: :-
-    (:Buzz) == fizzbuzz(1515)
+    (:Buzz) == (fizzbuzz(1515))
   operator: eq
   expected: :-
     :Buzz
