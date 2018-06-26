@@ -4,7 +4,7 @@ module Tap
   TAP_VERSION = 13
 
   class Output
-    def initialize(@io); end
+    def initialize(@io : IO); end
 
     def version
       @io.puts "TAP Version #{Tap::TAP_VERSION}"
@@ -30,7 +30,7 @@ module Tap
         name, value = name_and_value
 
         if value =~ /[-:?\n\r\t]/
-          value = ":-\n#{value.lines.map{ |l| "    #{l}" }.join "\n"}\n"
+          value = ":-\n#{value.lines.map { |l| "    #{l}" }.join "\n"}\n"
         end
 
         @io.puts "  #{name}: #{value}"

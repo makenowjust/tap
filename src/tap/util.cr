@@ -7,7 +7,7 @@ module Tap::Util
   end
 
   def fix_path(path)
-    cwd = Dir.working_directory
+    cwd = Dir.current
     if path.starts_with?(cwd)
       path.sub(cwd, ".")
     else
