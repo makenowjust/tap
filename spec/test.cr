@@ -33,7 +33,7 @@ T.eq_false false
 T.eq_false "false"
 
 class Cheat
-  def initialize(@object_id); end
+  def initialize(@object_id : Int32); end
 
   def inspect(io)
     io << "Cheat.new(#{object_id.inspect})"
@@ -105,19 +105,19 @@ class Ex < Exception
   end
 end
 
-T.raises{ raise Ex.new "error" }
-T.raises(message: "raise an exception"){ raise Ex.new "error" }
-T.raises{ nil }
-T.raises(message: "not raise an exception"){ nil }
-T.raises("error", "raise an exception"){ raise Ex.new "error" }
-T.raises("exception", "raise an exception"){ raise Ex.new "error" }
-T.raises(/error/, "raise an exception"){ raise Ex.new "error" }
-T.raises(/exception/, "raise an exception"){ raise Ex.new "error" }
+T.raises { raise Ex.new "error" }
+T.raises(message: "raise an exception") { raise Ex.new "error" }
+T.raises { nil }
+T.raises(message: "not raise an exception") { nil }
+T.raises("error", "raise an exception") { raise Ex.new "error" }
+T.raises("exception", "raise an exception") { raise Ex.new "error" }
+T.raises(/error/, "raise an exception") { raise Ex.new "error" }
+T.raises(/exception/, "raise an exception") { raise Ex.new "error" }
 
-T.not_raises{ raise Ex.new "error" }
-T.not_raises("raise an exception"){ raise Ex.new "error" }
-T.not_raises{ nil }
-T.not_raises("not raise an exception"){ nil }
+T.not_raises { raise Ex.new "error" }
+T.not_raises("raise an exception") { raise Ex.new "error" }
+T.not_raises { nil }
+T.not_raises("not raise an exception") { nil }
 
 T.test do
   T.ok true, "in unnamed group"

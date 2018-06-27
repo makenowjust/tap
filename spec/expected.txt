@@ -83,7 +83,7 @@ ok 17 - should be nil
 not ok 18 - should be nil
   ---
   test: :-
-    nil == :not_nil
+    nil == (:not_nil)
   operator: eq
   expected: nil
   actual: :-
@@ -309,7 +309,7 @@ ok 57 - match regex
 ok 58 - should match
 not ok 59 - should match
   ---
-  test: 1..3 === 5
+  test: 1..(3 === 5)
   operator: match
   expected: 1..3
   actual: 5
@@ -355,7 +355,7 @@ not ok 64 - match regex
   ...
 not ok 65 - should not match
   ---
-  test: !(1..3 === 1)
+  test: !(1..(3 === 1))
   operator: not_match
   expected: 1..3
   actual: 1
@@ -388,9 +388,7 @@ not ok 72 - raise an exception
   expected: "exception"
   actual: :-
     Ex.new("error")
-
     no backtrace...
-
   at: :-
     ./spec/test.cr - line at 113
   ...
@@ -401,9 +399,7 @@ not ok 74 - raise an exception
   expected: /exception/
   actual: :-
     Ex.new("error")
-
     no backtrace...
-
   at: :-
     ./spec/test.cr - line at 115
   ...
@@ -412,9 +408,7 @@ not ok 75 - should not raise
   operator: not_raises
   error: :-
     Ex.new("error")
-
     no backtrace...
-
   at: :-
     ./spec/test.cr - line at 117
   ...
@@ -423,9 +417,7 @@ not ok 76 - raise an exception
   operator: not_raises
   error: :-
     Ex.new("error")
-
     no backtrace...
-
   at: :-
     ./spec/test.cr - line at 118
   ...
@@ -468,9 +460,7 @@ not ok 85 - catch an exception in test group
   ---
   error: :-
     Ex.new("error")
-
     no backtrace...
-
   ...
 ok 86 - # skip catch an exception in test group
 
